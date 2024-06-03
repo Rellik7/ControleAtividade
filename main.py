@@ -30,7 +30,7 @@ async def buscar_atividades(db: db_dependency):
     result = db.query(Atividade).order_by(Atividade.id).all()
 
     if not result:
-        raise HTTPException(status_code=404, detail='Aitividades não encontradas')
+        raise HTTPException(status_code=404, detail='Atividades não encontradas')
     return result
 
 
